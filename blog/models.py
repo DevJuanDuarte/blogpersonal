@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Post(models.Model):
     image = models.ImageField()
-    title = models.CharField(max_lenght= 200)
+    title = models.CharField(max_length = 200)
     desc = models.TextField()
     content = models.TextField()
 
