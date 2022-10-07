@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from tabnanny import verbose
 from django.db import models
 
@@ -6,7 +7,7 @@ from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Post(models.Model):
-    image = models.ImageField(verbose_name='Imagen')
+    image = models.ImageField(verbose_name='Imagen', upload_to= 'blog')
     title = models.CharField(max_length = 200, verbose_name = 'Título')
     desc = models.TextField(verbose_name='Descripción')
     content = RichTextField(verbose_name='Contenido')
