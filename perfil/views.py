@@ -1,7 +1,12 @@
 from django.shortcuts import render,HttpResponse
 
+#MODELS
+from .models import Project
 # Create your views here.
 
 def profile(request):
-    return HttpResponse('<h2> PAGINA DE PERFIL <h2>')
+
+    projects = Project.objects.all()
+    
+    return HttpResponse(projects)
     
