@@ -1,12 +1,15 @@
 from tabnanny import verbose
 from django.db import models
 
+from ckeditor.fields import RichTextField
+
+
 # Create your models here.
 class Post(models.Model):
     image = models.ImageField(verbose_name='Imagen')
     title = models.CharField(max_length = 200, verbose_name = 'Título')
     desc = models.TextField(verbose_name='Descripción')
-    content = models.TextField(verbose_name='Contenido')
+    content = RichTextField(verbose_name='Contenido')
 
     created = models.DateTimeField(
         auto_now_add=True, 
