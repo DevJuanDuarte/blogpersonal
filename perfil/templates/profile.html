@@ -1,1 +1,33 @@
-<h1>Pagina de profile</h1>
+{%extends 'base.html'%}
+
+{% load static %}
+
+{%block content%}
+<main class = "main-profile">
+    <section class="profile">
+        <div class="profile-img">
+            <img src="{% static 'img/profile-pic.jpg' %}" alt="">
+        </div>
+        <div class="profile-info">
+            <h2>Hola, mi nombre es Juan!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam id dolore doloribus error obcaecati quidem!</p>
+        </div>
+    </section>
+    <section class="projects-container">
+        <h3>Proyectos</h3>
+        <div class="project">
+            <h4>Titulo del Proyecto</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae officia dolores nemo.</p>
+        </div>
+        <div class="project">
+            <h4>Titulo del Proyecto</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae officia dolores nemo.</p>
+        </div>
+        <div class="project">
+            <h4>Titulo del Proyecto</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae officia dolores nemo.</p>
+        </div>
+
+    </section>
+</main>
+{%endblock%}
