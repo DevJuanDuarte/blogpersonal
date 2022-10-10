@@ -1,0 +1,33 @@
+@media screen and (max-width: 1080px){
+    .posts{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 940px){
+    .news-content h2{
+        font-size: 90%;
+    }
+    .news-content p{
+        font-size: 70%;
+    }
+
+    .posts-blog p{
+        font-size: 70%;
+    }
+
+    .posts-blog {
+        padding-left: 65px;
+        max-width: 45%;
+        text-align: center; 
+    }
+    .posts-blog img{
+        text-align: center;
+    }
+
+    .posts{
+        padding: 60px;
+    }
+
+
+   
+}
