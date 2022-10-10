@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render
 
 #MODELS
 from .models import Post
@@ -6,14 +6,14 @@ from .models import Post
 
 def posts(request):
     blogs = Post.objects.all()
-    return HttpResponse(blogs)
+    return render(request, 'blogs.html')
 
 
 
 def post(request, id):
     blog = Post.objects.get(id=id)
     content = f'{blog.title} - {blog.desc}'
-    return HttpResponse(content)
+    return render(request, 'blog.html')
 
 
     

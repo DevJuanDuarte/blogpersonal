@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render
 
 #MODELS
 from .models import Project
@@ -8,5 +8,5 @@ def profile(request):
 
     projects = Project.objects.all()
     
-    return HttpResponse(projects)
+    return render(request, 'profile.html')
     
