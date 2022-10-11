@@ -8,5 +8,5 @@ def profile(request):
 
     projects = Project.objects.all()
     
-    return render(request, 'profile.html')
+    return render(request, 'profile.html', {'projects':projects})
     

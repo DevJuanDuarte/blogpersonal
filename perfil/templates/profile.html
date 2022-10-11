@@ -1,5 +1,7 @@
 {%extends 'base.html'%}
 
+{% block title %} Mi Perfil {% endblock %}
+
 {% load static %}
 
 {%block content%}
@@ -15,18 +17,12 @@
     </section>
     <section class="projects-container">
         <h3>Proyectos</h3>
+        {% for project in projects %}
         <div class="project">
-            <h4>Titulo del Proyecto</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae officia dolores nemo.</p>
+            <h4>{{project.title}}</h4>
+            <p>{{project.desc}}</p>
         </div>
-        <div class="project">
-            <h4>Titulo del Proyecto</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae officia dolores nemo.</p>
-        </div>
-        <div class="project">
-            <h4>Titulo del Proyecto</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae officia dolores nemo.</p>
-        </div>
+        {% endfor %}
 
     </section>
 </main>

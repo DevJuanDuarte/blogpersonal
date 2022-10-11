@@ -1,50 +1,22 @@
 {%extends 'base.html'%}
 
+{% block title %} {{post.title}} {% endblock %}
+
 {% load static %}
 
 {%block content%}
 <main class="main-blog">
     <div class="main-blog__content">
-        <img src="{% static 'img/pc-img.jpg' %}" alt="">
+        <img src="{{ post.image.url }}" alt="">
 
         <article class="main-blog-content__article">
             <h4>Noticias</h4>
-            <h1>Titulo del blogsposts</h1>
+            <h1>{{ post.title }}</h1>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                 Commodi quam aspernatur ex accusantium voluptas quas, dignissimos, 
-                 reiciendis aperiam iusto nihil quo officia debitis veniam. 
-                 Id a reiciendis quasi minus laborum.
-            </p>
-
-            <br>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Perferendis non praesentium molestias consectetur similique 
-                ducimus ab veritatis reprehenderit ex, fuga dolor quas doloribus
-                 deserunt. Placeat ab atque reiciendis recusandae maxime.
-            </p>
-
-            <br>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 A id nobis facilis veniam. Neque, nostrum voluptates
-                  aliquid ut facere illum ipsam tenetur suscipit rerum 
-                  sapiente! Dolores aspernatur quibusdam vero veritatis.
-            </p>
-
-        </article>
-        
-
-
+            <div>{{ post.content | safe }}</div>
+        </article>      
     </div>
 
 </section>
-
-
-
 </main>
 {%endblock%}
