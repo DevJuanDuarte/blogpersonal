@@ -18,7 +18,7 @@
     <header class="header">
         <div class="social">
             <div class="social-icons">
-                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/juan-dev-contact/"><i class="fab fa-linkedin"></i></a>
                 <a href=""><i class="fab fa-github"></i></a>
                 <a href=""><i class="fab fa-instagram"></i></a>
             </div>
@@ -26,14 +26,14 @@
         </div>
         <nav class="nav">
             <div class="nav-logo">
-                <a href="index.html">
+                <a href="{% url 'home' %}">
                     <img src="{% static 'img/logo.png' %}" alt="Logo de pagina">
                 </a>
                 
             </div>
 
             <div class="nav-link">
-                <a href="profile.html">Sobre mi</a>
+                <a href="{% url 'profile' %}">Sobre mi</a>
             </div>
         </nav>
     </header>
